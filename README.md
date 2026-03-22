@@ -206,7 +206,7 @@ MIT — see [LICENSE](LICENSE).
 
 ## 简体中文
 
-**等 MCP 定制排期等到心焦，还是把每个 REST 接口都包成「技能」又慢又累？** **mcp-aha** 让现有 **HTTP 服务**直接变成 **MCP 工具**：在 Mac 原生界面里配服务器与端点，只在参数或响应形状不一致时写几行 **JavaScript**，助手走 MCP，后端仍是 REST。
+**等 MCP 定制排期等到心焦，还是把每个 REST 接口都包成「Skills」又慢又累？** **mcp-aha** 让现有 **HTTP 服务**直接变成 **MCP 工具**：在 Mac 原生界面里配服务器与端点，只在参数或响应形状不一致时写几行 **JavaScript**，助手走 MCP，后端仍是 REST。
 
 **支持的 REST 认证（按服务器配置）**  
 - **静态请求头** — 用 JSON 配置任意出站 Header：例如长期有效的 **`Authorization: Bearer …`**、**`X-Api-Key`**、厂商自定义头，或 **`Authorization: Basic …`**（由你填入网关要求的完整值）。  
