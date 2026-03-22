@@ -1,5 +1,18 @@
 # mcp-aha
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
+[![macOS](https://img.shields.io/badge/macOS-13%2B-000000?style=flat&logo=apple&logoColor=white)](https://developer.apple.com/macos/)
+[![Swift 5.9](https://img.shields.io/badge/Swift-5.9-F05138?style=flat&logo=swift&logoColor=white)](https://swift.org)
+[![Xcode 15+](https://img.shields.io/badge/Xcode-15%2B-147EFB?style=flat&logo=xcode&logoColor=white)](https://developer.apple.com/xcode/)
+[![MCP](https://img.shields.io/badge/MCP-2024--11--05-7C3AED?style=flat)](https://modelcontextprotocol.io)
+[![Releases](https://img.shields.io/badge/Download-.dmg-181717?style=flat&logo=github&logoColor=white)](./releases)
+
+Tired of **waiting forever** for bespoke MCP work, or **burning days** hand-wrapping every REST surface as yet another “skill”? **mcp-aha** meets your stack where it already is: **plain HTTP**. Point a native macOS UI at your APIs, add **small JavaScript transforms** only when shapes differ, and let assistants speak **MCP** while your backends stay **REST**.
+
+**REST authentication (per server profile)**  
+- **Static / header-based** — A JSON object of outbound headers: e.g. long-lived **`Authorization: Bearer …`**, **`X-Api-Key`**, vendor-specific keys, or **`Authorization: Basic …`** (you supply the full header value your gateway expects).  
+- **Client-credentials style token fetch** — `POST` JSON to your **auth URL**, cache the JSON response, then splice fields into headers with **`${AUTH_RESPONSE.fieldName}`** placeholders, refreshed on a **configurable TTL** (minutes).
+
 **Language / 语言:** **English** (default) · [简体中文](#chinese)
 
 ---
@@ -8,7 +21,7 @@
 
 ## English
 
-**mcp-aha** is a native **macOS** app that turns arbitrary **REST APIs** into **MCP (Model Context Protocol)** tools so assistants (Claude, Cursor, and others) can call your backends directly.
+**mcp-aha** is the app behind the pitch above: a native **macOS** client that turns **REST APIs** into **MCP** tools for Claude, Cursor, and other hosts—without replacing your HTTP services.
 
 ### Features
 
@@ -193,7 +206,11 @@ MIT — see [LICENSE](LICENSE).
 
 ## 简体中文
 
-**mcp-aha** 是一款原生 **macOS** 桌面应用：把任意 **REST API** 封装为 **MCP（Model Context Protocol）** 工具，供 Claude、Cursor 等 AI 助手直接调用后端。
+**等 MCP 定制排期等到心焦，还是把每个 REST 接口都包成「技能」又慢又累？** **mcp-aha** 让现有 **HTTP 服务**直接变成 **MCP 工具**：在 Mac 原生界面里配服务器与端点，只在参数或响应形状不一致时写几行 **JavaScript**，助手走 MCP，后端仍是 REST。
+
+**支持的 REST 认证（按服务器配置）**  
+- **静态请求头** — 用 JSON 配置任意出站 Header：例如长期有效的 **`Authorization: Bearer …`**、**`X-Api-Key`**、厂商自定义头，或 **`Authorization: Basic …`**（由你填入网关要求的完整值）。  
+- **客户端凭证 / 换票** — 向 **鉴权 URL** `POST` JSON，缓存返回的 JSON；在请求头里用 **`${AUTH_RESPONSE.字段名}`** 占位符注入字段，按 **过期时间（分钟）** 自动刷新再拉取。
 
 ### 功能特性
 
