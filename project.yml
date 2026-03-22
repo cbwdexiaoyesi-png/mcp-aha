@@ -1,0 +1,42 @@
+name: mcp-aha
+options:
+  bundleIdPrefix: com.mcp-aha
+  deploymentTarget:
+    macOS: "13.0"
+  xcodeVersion: "15.0"
+
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    MACOSX_DEPLOYMENT_TARGET: "13.0"
+
+targets:
+  mcp-aha:
+    type: application
+    platform: macOS
+    sources:
+      - path: Sources
+        type: group
+    resources:
+      - path: Resources/Assets.xcassets
+      - path: Resources/AppIcon.icns
+      - path: Resources/Info.plist
+        buildPhase: none
+      - path: Resources/mcp-aha.entitlements
+        buildPhase: none
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.mcp-aha.app
+        PRODUCT_NAME: mcp-aha
+        INFOPLIST_FILE: Resources/Info.plist
+        CODE_SIGN_STYLE: Automatic
+        COMBINE_HIDPI_IMAGES: YES
+        ENABLE_HARDENED_RUNTIME: YES
+        CODE_SIGN_IDENTITY: "-"
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+    entitlements:
+      path: Resources/mcp-aha.entitlements
+      properties:
+        com.apple.security.app-sandbox: false
+        com.apple.security.network.client: true
+        com.apple.security.network.server: true

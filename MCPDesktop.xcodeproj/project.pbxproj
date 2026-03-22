@@ -1,0 +1,375 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0CDEC31DCED2752DBC091241 /* ServerProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC680BA4F32C6D895CF94B4 /* ServerProfile.swift */; };
+		365D41D5A28E2C888FB86E8C /* APIGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF610E27126150EB891B63FF /* APIGateway.swift */; };
+		3A32280C901BFC9418B52659 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B3F4904BE8F2C9E5E0645F /* APIEndpoint.swift */; };
+		72C228EE2417CE5B951DF31A /* ConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F235387F667FF26C1FAD7D /* ConfigView.swift */; };
+		744F2685DD710F43AE771ABC /* APIGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08925EF403FBBD62E753C43 /* APIGroup.swift */; };
+		77B1D730650CEEAC2E218A78 /* McpAhaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F990A13C4A1246E6186EA3 /* McpAhaApp.swift */; };
+		8EC57C988B9AB644778E7400 /* MCPServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB890AB516D4F3EA82CC360 /* MCPServer.swift */; };
+		9DD4FD6E1B326685CB4A425F /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6679DE643C0B16135694FE /* Config.swift */; };
+		D0C5C38F941F8282DC1B805D /* ServerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8BC039237950A29030ABB4 /* ServerView.swift */; };
+		D5DE69D52C0CCC5F5D20343B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FAB67CE3DE7C768E5E9E49 /* ContentView.swift */; };
+		D707796B4D32F5FF97776724 /* ImportExportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4DF47FC93227B9F4A60789 /* ImportExportView.swift */; };
+		DF5B448D82932E1C28FCC7A0 /* JSEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8A642787B6B3BC157998E7 /* JSEngine.swift */; };
+		E226130DA050F4903500D736 /* SyntaxEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8424F69DA17566CA08E09A70 /* SyntaxEditor.swift */; };
+		FBB087361990F7BE0452FFD2 /* APIListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83F295D9F17D8E7B409F9C0 /* APIListView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		03FAB67CE3DE7C768E5E9E49 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		22B3F4904BE8F2C9E5E0645F /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
+		3D8BC039237950A29030ABB4 /* ServerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerView.swift; sourceTree = "<group>"; };
+		69F235387F667FF26C1FAD7D /* ConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigView.swift; sourceTree = "<group>"; };
+		8424F69DA17566CA08E09A70 /* SyntaxEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntaxEditor.swift; sourceTree = "<group>"; };
+		8E8A642787B6B3BC157998E7 /* JSEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSEngine.swift; sourceTree = "<group>"; };
+		A08925EF403FBBD62E753C43 /* APIGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIGroup.swift; sourceTree = "<group>"; };
+		AAB890AB516D4F3EA82CC360 /* MCPServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCPServer.swift; sourceTree = "<group>"; };
+		AFC680BA4F32C6D895CF94B4 /* ServerProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerProfile.swift; sourceTree = "<group>"; };
+		C4F990A13C4A1246E6186EA3 /* McpAhaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = McpAhaApp.swift; sourceTree = "<group>"; };
+		D83F295D9F17D8E7B409F9C0 /* APIListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIListView.swift; sourceTree = "<group>"; };
+		DA6679DE643C0B16135694FE /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		DF4DF47FC93227B9F4A60789 /* ImportExportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportExportView.swift; sourceTree = "<group>"; };
+		FBBE3CEEC7029ADA4DF0D831 /* MCPDesktop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MCPDesktop.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF610E27126150EB891B63FF /* APIGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIGateway.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		115114D1CA66BEF01A8888A8 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				7A669A51E2A02F7F72DED3F3 /* App */,
+				66BDDDC9033F01DB2A25D8CB /* Models */,
+				AAF60F060E95B6EEBACECE18 /* Services */,
+				AEDCD3972C4441430318D525 /* Views */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		1680FFF899048F131F86DE41 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FBBE3CEEC7029ADA4DF0D831 /* MCPDesktop.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		39C4DD116E5096FCB00B61B9 = {
+			isa = PBXGroup;
+			children = (
+				115114D1CA66BEF01A8888A8 /* Sources */,
+				1680FFF899048F131F86DE41 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		66BDDDC9033F01DB2A25D8CB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				22B3F4904BE8F2C9E5E0645F /* APIEndpoint.swift */,
+				A08925EF403FBBD62E753C43 /* APIGroup.swift */,
+				DA6679DE643C0B16135694FE /* Config.swift */,
+				AFC680BA4F32C6D895CF94B4 /* ServerProfile.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7A669A51E2A02F7F72DED3F3 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C4F990A13C4A1246E6186EA3 /* McpAhaApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		AAF60F060E95B6EEBACECE18 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FF610E27126150EB891B63FF /* APIGateway.swift */,
+				8E8A642787B6B3BC157998E7 /* JSEngine.swift */,
+				AAB890AB516D4F3EA82CC360 /* MCPServer.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		AEDCD3972C4441430318D525 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D83F295D9F17D8E7B409F9C0 /* APIListView.swift */,
+				69F235387F667FF26C1FAD7D /* ConfigView.swift */,
+				03FAB67CE3DE7C768E5E9E49 /* ContentView.swift */,
+				DF4DF47FC93227B9F4A60789 /* ImportExportView.swift */,
+				3D8BC039237950A29030ABB4 /* ServerView.swift */,
+				8424F69DA17566CA08E09A70 /* SyntaxEditor.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DA153281516D3E64F7B23D07 /* MCPDesktop */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B241A6ECDA2390089F560C02 /* Build configuration list for PBXNativeTarget "MCPDesktop" */;
+			buildPhases = (
+				75922D84526A9C1AD8AC6966 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MCPDesktop;
+			packageProductDependencies = (
+			);
+			productName = MCPDesktop;
+			productReference = FBBE3CEEC7029ADA4DF0D831 /* MCPDesktop.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8D3D7CD6A9B9123403E2B8AB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					DA153281516D3E64F7B23D07 = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 0E583680BDFA4242BE4CE309 /* Build configuration list for PBXProject "MCPDesktop" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 39C4DD116E5096FCB00B61B9;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 1680FFF899048F131F86DE41 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DA153281516D3E64F7B23D07 /* MCPDesktop */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		75922D84526A9C1AD8AC6966 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A32280C901BFC9418B52659 /* APIEndpoint.swift in Sources */,
+				365D41D5A28E2C888FB86E8C /* APIGateway.swift in Sources */,
+				744F2685DD710F43AE771ABC /* APIGroup.swift in Sources */,
+				FBB087361990F7BE0452FFD2 /* APIListView.swift in Sources */,
+				9DD4FD6E1B326685CB4A425F /* Config.swift in Sources */,
+				72C228EE2417CE5B951DF31A /* ConfigView.swift in Sources */,
+				D5DE69D52C0CCC5F5D20343B /* ContentView.swift in Sources */,
+				D707796B4D32F5FF97776724 /* ImportExportView.swift in Sources */,
+				DF5B448D82932E1C28FCC7A0 /* JSEngine.swift in Sources */,
+				77B1D730650CEEAC2E218A78 /* McpAhaApp.swift in Sources */,
+				8EC57C988B9AB644778E7400 /* MCPServer.swift in Sources */,
+				0CDEC31DCED2752DBC091241 /* ServerProfile.swift in Sources */,
+				D0C5C38F941F8282DC1B805D /* ServerView.swift in Sources */,
+				E226130DA050F4903500D736 /* SyntaxEditor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		158D56341868ACB2AAC89037 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Resources/mcp-aha.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mcpdesktop.app;
+				PRODUCT_NAME = MCPDesktop;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		79C9717C63B6B04E56CF807D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+		9FD099793CE233C73AFAB733 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+		BB399359833205B035879FFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Resources/mcp-aha.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mcpdesktop.app;
+				PRODUCT_NAME = MCPDesktop;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0E583680BDFA4242BE4CE309 /* Build configuration list for PBXProject "MCPDesktop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FD099793CE233C73AFAB733 /* Debug */,
+				79C9717C63B6B04E56CF807D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B241A6ECDA2390089F560C02 /* Build configuration list for PBXNativeTarget "MCPDesktop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				158D56341868ACB2AAC89037 /* Debug */,
+				BB399359833205B035879FFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8D3D7CD6A9B9123403E2B8AB /* Project object */;
+}

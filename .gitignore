@@ -1,0 +1,32 @@
+# Xcode
+build/
+DerivedData/
+*.xcuserstate
+*.xcscmblueprint
+xcuserdata/
+
+# Swift Package Manager
+.build/
+.swiftpm/
+
+# macOS
+.DS_Store
+
+# App export / local secrets (Import/Export 默认文件名 mcp-config-*.json)
+mcp-config-*.json
+**/mcp-config-*.json
+
+# Environment & credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.p12
+*.mobileprovision
+
+# Local editor / OS
+*.swp
+*~
+
+# Release artifacts (upload .dmg via GitHub Releases; avoid large binaries in git)
+release/*.dmg
