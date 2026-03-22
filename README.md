@@ -41,6 +41,73 @@ mcp-aha/
     └── Services/            # MCPServer, JSEngine, APIGateway
 ```
 
+### Architecture
+
+#### End-to-end data flow
+
+```mermaid
+flowchart LR
+  subgraph Host["AI host (local)"]
+    Client["Claude / Cursor / …"]
+  end
+  subgraph App["mcp-aha (macOS app)"]
+    UI["SwiftUI views"]
+    UD[("UserDefaults\n(config)")]
+    NW["MCPServerManager\nNWListener :port"]
+    MCP["MCPServer\n(JSON-RPC)"]
+    JS["JSEngine\n(JavaScriptCore)"]
+    Auth[("AuthTokenCache")]
+    UI <--> UD
+    NW --> MCP
+    MCP --> JS
+    MCP --> Auth
+  end
+  subgraph Backend["Your backends"]
+    REST["REST APIs"]
+  end
+  Client <-->|"HTTP POST\nJSON-RPC 2.0"| NW
+  MCP <-->|"HTTPS / HTTP"| REST
+```
+
+#### Core logic: `tools/call`
+
+```mermaid
+flowchart TD
+  A["MCP tools/call\n(arguments)"] --> B["Request transform\n(JS)"]
+  B --> C["Resolved params\n_path / _query / _body"]
+  C --> D{"Client-credentials\nauth?"}
+  D -->|yes| E["Fetch or reuse token\n(AuthTokenCache)"]
+  D -->|no| F["Static headers"]
+  E --> G["Build URL + headers\nAUTH_RESPONSE vars"]
+  F --> G
+  G --> H["URLSession → REST API"]
+  H --> I["Response transform\n(JS)"]
+  I --> J["MCP result\n(text / JSON)"]
+```
+
+#### Module map
+
+```mermaid
+flowchart TB
+  subgraph Views["Views (SwiftUI)"]
+    V["ContentView · ConfigView\nAPIListView · ServerView · …"]
+  end
+  subgraph Models["Models + persistence"]
+    SP["ServerProfileStore"]
+    EP["EndpointStore · APIGroup"]
+    AC["AppConfig (port)"]
+  end
+  subgraph Services["Services"]
+    MGR["MCPServerManager"]
+    SRV["MCPServer"]
+    JS2["JSEngine"]
+  end
+  V --> SP & EP & AC
+  MGR --> SRV
+  SRV --> JS2
+  SRV --> SP & EP
+```
+
 ### Requirements
 
 - macOS 13.0+  
@@ -157,6 +224,73 @@ mcp-aha/
     ├── Models/
     ├── Views/
     └── Services/
+```
+
+### 架构与数据流
+
+#### 端到端数据流
+
+```mermaid
+flowchart LR
+  subgraph Host["AI 宿主（本机）"]
+    Client["Claude / Cursor / …"]
+  end
+  subgraph App["mcp-aha（macOS 应用）"]
+    UI["SwiftUI 界面"]
+    UD[("UserDefaults\n配置持久化")]
+    NW["MCPServerManager\nNWListener 监听端口"]
+    MCP["MCPServer\nJSON-RPC 处理"]
+    JS["JSEngine\nJavaScriptCore"]
+    Auth[("AuthTokenCache\n鉴权缓存")]
+    UI <--> UD
+    NW --> MCP
+    MCP --> JS
+    MCP --> Auth
+  end
+  subgraph Backend["你的后端"]
+    REST["REST API"]
+  end
+  Client <-->|"HTTP POST\nJSON-RPC 2.0"| NW
+  MCP <-->|"HTTPS / HTTP"| REST
+```
+
+#### 核心逻辑：`tools/call`
+
+```mermaid
+flowchart TD
+  A["MCP tools/call\n(arguments)"] --> B["请求转换脚本\n(JavaScript)"]
+  B --> C["解析结果\n_path / _query / _body"]
+  C --> D{"客户端凭证\n鉴权?"}
+  D -->|是| E["拉取或复用 Token\n(AuthTokenCache)"]
+  D -->|否| F["静态请求头"]
+  E --> G["拼接 URL + Headers\n替换 AUTH_RESPONSE 占位符"]
+  F --> G
+  G --> H["URLSession 调用 REST"]
+  H --> I["响应转换脚本\n(JavaScript)"]
+  I --> J["封装为 MCP 返回\n文本 / JSON"]
+```
+
+#### 模块关系
+
+```mermaid
+flowchart TB
+  subgraph Views["界面层 SwiftUI"]
+    V["ContentView · ConfigView\nAPIListView · ServerView · …"]
+  end
+  subgraph Models["模型与持久化"]
+    SP["ServerProfileStore"]
+    EP["EndpointStore · APIGroup"]
+    AC["AppConfig（端口等）"]
+  end
+  subgraph Services["服务层"]
+    MGR["MCPServerManager"]
+    SRV["MCPServer"]
+    JS2["JSEngine"]
+  end
+  V --> SP & EP & AC
+  MGR --> SRV
+  SRV --> JS2
+  SRV --> SP & EP
 ```
 
 ### 环境要求
